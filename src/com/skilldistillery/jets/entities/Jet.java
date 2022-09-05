@@ -1,12 +1,11 @@
 package com.skilldistillery.jets.entities;
 
-import java.util.List;
-
 public abstract class Jet {
-	
+
 	@Override
 	public String toString() {
-		return "Type = " + type + ", Model = " + model + ", Range = " + range + ", Price = " + price + ", Speed = " + speed;
+		return "Type = " + type + ", Model = " + model + ", Range = " + range + ", Price = " + price + ", Speed = "
+				+ speed;
 	}
 
 	public String getType() {
@@ -17,31 +16,30 @@ public abstract class Jet {
 		this.type = type;
 	}
 
-
-	public Jet(String type,String model,int range, long price, double speed) {
+	public Jet(String type, String model, int range, long price, double speed) {
 		this.type = type;
 		this.model = model;
 		this.range = range;
 		this.price = price;
 		this.speed = speed;
 	}
-	
+
 	public void fly() {
 		double time = range / speed;
 		double mach = speed * .00130332;
-	System.out.println(	"Type = " + type + ", Model = " + model + ", Range = " + range + ", Price = " + price + ", Speed = " + speed
-		+ "Speed in Mach = " + mach + " Hours until Refuel = " + time );
+		System.out.println("Type = " + type + ", Model = " + model + ", Range = " + range + ", Price = " + price
+				+ ", Speed = " + speed + "Speed in Mach = " + mach + " Hours until Refuel = " + time);
 	}
-	
-	
-	
-	public Jet() {} 
+
+	public Jet() {
+	}
+
 	private String type;
 	private String model;
 	private int range;
 	private long price;
 	private double speed;
-	
+
 	public String getModel() {
 		return model;
 	}
@@ -73,8 +71,5 @@ public abstract class Jet {
 	public void setSpeed(double speed) {
 		this.speed = speed;
 	}
-	
-	
-	}
 
-
+}

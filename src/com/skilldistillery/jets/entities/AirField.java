@@ -1,7 +1,6 @@
 package com.skilldistillery.jets.entities;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -12,6 +11,7 @@ public class AirField {
 	public List<Jet> getAirStrip() {
 		return airStrip;
 	}
+	
 	private List<Jet> airStrip = new ArrayList<>();
 
 	public void readFromFile() {
@@ -36,7 +36,7 @@ public class AirField {
 					j = new CargoJet(type, model, range, price, speed);
 				}
 				airStrip.add(j);
-				
+
 			}
 			br.close();
 		} catch (IOException e) {
@@ -46,5 +46,4 @@ public class AirField {
 
 	}
 
-	
 }
