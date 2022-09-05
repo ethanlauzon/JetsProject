@@ -6,8 +6,7 @@ public abstract class Jet {
 	
 	@Override
 	public String toString() {
-		return "Jet [type=" + type + ", model=" + model + ", range=" + range + ", price=" + price + ", speed=" + speed
-				+ "]";
+		return "Type = " + type + ", Model = " + model + ", Range = " + range + ", Price = " + price + ", Speed = " + speed;
 	}
 
 	public String getType() {
@@ -30,8 +29,8 @@ public abstract class Jet {
 	public void fly() {
 		double time = range / speed;
 		double mach = speed * .00130332;
-	System.out.println(	"Jet [type=" + type + ", model=" + model + ", range=" + range + ", price=" + price + ", speed=" + speed
-		+ " time until empty = " + time );
+	System.out.println(	"Type = " + type + ", Model = " + model + ", Range = " + range + ", Price = " + price + ", Speed = " + speed
+		+ "Speed in Mach = " + mach + " Hours until Refuel = " + time );
 	}
 	
 	
@@ -74,6 +73,7 @@ public abstract class Jet {
 	public void setSpeed(double speed) {
 		this.speed = speed;
 	}
+	
 	
 	}
 
